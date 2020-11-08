@@ -59,12 +59,12 @@
 			<tr>
 				<th>number</th>
 				<th>email</th> 
-				<th>priority</th>
 				<th>note</th>
+				<th>priority</th>
 				<th>done?</th>
 			</tr>
 			{% for x in todo_list %}
-			<tr><td>x</td><td>{{todo_list[x][0]}}</td><td>{{todo_list[x][1]}}</td><td>{{todo_list[x][2]}}</td><td>{{todo_list[x][3]}}</td>
+			<tr><td>{{x}}<td>{{todo_list[x][0]}}</td><td>{{todo_list[x][1]}}</td><td>{{todo_list[x][2]}}</td><td>{{todo_list[x][3]}}</td>
 			{% endfor %}
 			</tr>
 		</table>
@@ -75,13 +75,14 @@
 		  	<input type="text" name="email">Enter Email</input>
 		 
 			<label for="note">Note:</label>
-			<textarea name="Note" cols="50" rows="4"></textarea>
+			<textarea name="note" cols="50" rows="4"></textarea>
 			<label for="priority">Priority:</label>
 			<select name="priority">
 				<option value="high">High</option>
 				<option value="medium">Medium</option>
 				<option value="low">Low</option>
-			<input type="checkbox" name="done" value="done">Done?</input>
+			<input type="radio" name="done" value="yes">complete</input>
+			 <input type="radio" name="done" value="no">incomplete</input>
 			<input type="submit" value="Create new ToDo List Item!">
 			</select>
 		</form>
