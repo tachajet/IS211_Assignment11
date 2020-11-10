@@ -86,8 +86,15 @@
 			<input type="submit" value="Create new ToDo List Item!">
 			</select>
 		</form>
-
-		
+		<p>Clear your list:</p>
+		<form action="/clear" style="center" method="post">
+		<input type="submit" value="Clear the ToDo List">
+		</form>
+		<p>Delete and entry from your list:</p>
+		<form action="/delete" style="center" method="post">
+		<input type="text" name="delete_key">Enter item number:</input>
+		<input type="submit" value="Delete Item">
+		</form>
 	<table class ="lead"></table>
 	</body>
 </html>
